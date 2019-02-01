@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.calc{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+.calc .buttons{
+    width: 480px;
+}
+.calc .history{
+    width: 400px;
+    text-align: center;
+    padding-top:20px; 
+    margin-left: 50px;
+    height: 500px;
+    background: #CCC;
+    overflow-y: scroll;
+}
+.calc .history ul{
+    list-style: none;
+}
+.calc .history ul li{
+    border-bottom: 1px solid #222;
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+    font-size: 30px;
+}
+.history form input{
+    border: 0;
+    border-radius: 10px;
+    background: #EEE;
+    width: 300px;
+    height: 40px;
+    padding-left: 5px;
+    font-size: 18px;
+}
+.calc form .res{
+    width: 100%;
+    height: 50px;
+    font-size: 35px;
+    border: 0;
+}
+.calc form .res:nth-child(1){
+    border: 1px solid #CCC;
+}
+.btn{
+    width: 120px;
+    height: 80px;
+    font-size: 30px;
+    border:0;
+    color: white;
+}
+.btn.number{
+    background: rgb(0, 112, 156);
+}
+.btn.eq{
+    background: rgb(25, 130, 172);
+}
+.btn.op{
+    background: rgb(0, 60, 83);
+}
+.btn.btn-clear{
+    background: rgb(87, 162, 165);
+}
+.btn.btn-clear:active{
+    background: rgb(54, 110, 112);
+}
+.btn.number:active{
+    background: rgb(0, 89, 124);
+}
+.btn.eq:active{
+    background: rgb(19, 99, 131);
+}
+.btn.op:active{
+    background: rgb(0, 46, 65);
+}

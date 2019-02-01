@@ -1,0 +1,23 @@
+<div class="calc">
+  <div class="buttons">
+  <form>
+    <input class="res" type="text" name="input" [(ngModel)]="operation">
+    <input class="res" type="text" disabled name="result" value="{{result}}">
+  </form>
+  <div class="clear">
+    <button (click)="clear()" class="btn btn-clear">C</button>
+    <button (click)="clearAll()" class="btn btn-clear">AC</button>
+  </div>
+  <button *ngFor="let button of buttons" class="{{button.class}}" (click)="add(button.value)">{{button.value}}</button>
+  <button class="btn eq" (click)="res()">=</button>
+  <button class="btn op" (click)="add('+')">+</button>
+</div>
+  <div class="history">
+    <form>
+      <input name="search" [(ngModel)]='key' placeholder="Search History">
+    </form>
+      <ul>
+        <li *ngFor= 'let i of history | filter:key'>{{i}}</li>
+      </ul>
+  </div>
+</div>
